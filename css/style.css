@@ -1,0 +1,527 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  background: linear-gradient(to bottom right, #ffe4ec, #fff9fb);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Header Styles - IMPROVED */
+#navbar {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  padding: 16px 0;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header.hide {
+  transform: translateY(-100%);
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  margin-right: 15px;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+  background-color: transparent;
+  mix-blend-mode: normal;
+}
+
+nav ul li:after {
+  content: none; /* Remove dot separators */
+}
+
+nav ul li a {
+  color: #4a4a4a; /* Dark gray text */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: 600;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: white;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+nav ul li:after {
+  content: "";
+  height: 5px;
+  width: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+nav ul li:last-child:after {
+  content: "";
+  margin: 0;
+  background-color: transparent;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  padding: 5px 0;
+  position: relative;
+}
+
+nav ul li a:hover {
+  opacity: 0.8;
+}
+
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+/* Hero Section - FULL SCREEN */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay to match the image */
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.intro {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.title-container {
+  background: rgba(0, 0, 0, 0.4); /* Darker semi-transparent background */
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  padding: 50px 30px 50px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title-container h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.title-container p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Map Section */
+#map-section {
+  padding: 60px 20px 50px;
+  text-align: center;
+  background: #fff1f5;
+}
+
+#map-section h2 {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+#map {
+  height: 500px;
+  background: #ccc;
+  margin: 20px auto;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Data Section */
+#data-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+#data-section h2 {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+#data-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.column {
+  flex: 1 1 300px;
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.data-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.data-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.data-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.description h3 {
+  margin: 10px 0;
+  color: #f78fb3;
+  font-family: "Poppins", sans-serif;
+}
+
+.description p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+
+/* Author Section - FIXED VERTICAL ALIGNMENT */
+#author-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff9fb;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+#author-section h2 {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.author-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid #fff;
+}
+
+.author-name h3 {
+  color: #f78fb3;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+#author-section p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Footer - FIXED VERTICAL ALIGNMENT */
+#footer {
+  background: linear-gradient(90deg, #f9a8c0, #fcb3c6);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-content p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #f78fb3;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  background: #e6679e;
+  transform: translateY(-5px);
+}
+
+/* Legend Styles */
+.legend { 
+    padding: 6px 8px; 
+    background-color: rgba(255, 255, 255, 0.881); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    border-radius: 5px; 
+} 
+.legend div { 
+    width: 30px; 
+    height: 5px; 
+    float: left; 
+    margin-right: 8px; 
+    opacity: 0.5; 
+} 
+div.legend.leaflet-control br { 
+   clear:both;
+}
+
+/* Styling untuk layer control */
+.leaflet-control-layers {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  max-height: 460px;
+  position: sticky;
+  top: 10px;
+  z-index: 10000;
+}
+
+.leaflet-control-layers-expanded {
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #f78fb3 #f0e6eb;
+}
+
+.leaflet-control-layers-selector {
+  margin-right: 5px;
+}
+
+.leaflet-control-layers-separator {
+  margin: 8px 0;
+  border-top: 1px solid #ddd;
+}
+
+.leaflet-control-layers-base label,
+.leaflet-control-layers-overlays label {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  nav ul li:after {
+    margin: 0 5px;
+  }
+
+  .column {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .hero-section {
+    height: 60vh; /* Even smaller on mobile */
+  }
+
+  .title-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #navbar .container {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul li {
+    margin: 5px;
+  }
+
+  .hero-section {
+    padding-top: 120px;
+    height: 50vh; /* Even smaller on small devices */
+  }
+
+  .title-container h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Adjust the padding-top to account for the fixed header */
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 80px; /* Adjust based on your header height */
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    padding-top: 70px; /* Smaller padding for mobile */
+  }
+
+  .title-container h1 {
+    font-size: 2rem;
+  }
+
+  .title-container p {
+    font-size: 1rem;
+  }
+}
